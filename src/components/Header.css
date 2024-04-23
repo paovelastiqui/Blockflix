@@ -1,0 +1,89 @@
+/*Importaciones*/
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
+
+.jersey-25-regular {
+  font-family: "Jersey 25", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.logo {
+  color: red;
+  font-family: "Jersey 25", sans-serif;
+  font-size: 3em;
+  transition-duration: 500ms;
+}
+.logo:hover {
+  filter: drop-shadow(5px 0 30px rgb(255, 255, 255));
+  transition-duration: 500ms;
+  text-shadow: 5px 0 30px rgb(255, 255, 255);
+
+}
+
+/*------------------------------------*/
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #171227;
+  z-index: 1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1px 10%;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttons button{
+  margin: 5px;
+  padding: 5px 15px;
+  font-size: large;
+  
+}
+
+.buttons button:hover {
+  opacity: 1;
+  color: #fff;
+}
+
+.menu-icon {
+  display: none;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#menu-toggle:checked ~ .buttons {
+  transform: scale(1, 1);
+}
+
+@media only screen and (max-width: 950px) {
+  .buttons {
+    background-color: #171227;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 20vh;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .menu-icon {
+    display: block;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+  }
+}

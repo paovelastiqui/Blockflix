@@ -1,2 +1,1 @@
-import {BorwserRouter as Router,
-Rotues, Route} from "react-router-dom"
+//import {BorwserRouter as Router, Routes, Route} from "react-router-dom"
