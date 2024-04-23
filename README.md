@@ -1,8 +1,25 @@
-# React + Vite
+# Blockflix 🎬
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyecto creado durante el curso de React Js de Codo a Codo 4.0, donde elaboramos una e-commerce de alquiler de películas.
 
-Currently, two official plugins are available:
+Hecho con: ![](https://img.shields.io/badge/React%20JS%20-0891b2) ![](https://img.shields.io/badge/Firebase%20-16a34a)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Integrantes del grupo:**
+
+- Paola Velastiqui
+- Esteban Soaje
+- Jona Suarez
+- Abdon Sanchez
+
+----
+## 📝 Instalación
+
+####Instalar npm
+
+`$ npm install`
+
+####Ejecutar la aplicación
+
+`<$ npm run dev>`
+
+Abrir [http://localhost:5137](http://localhost:5137) para ver en el navegador.
