@@ -6,16 +6,16 @@ function Header() {
   return (
     <>
       
-    <header class="header">
+    <header className="header">
         <nav>
       <logo>
         <p className="logo">🎬Blockflix</p>
       </logo>
           <input type="checkbox" id="menu-toggle"/>
             <label for="menu-toggle" class="menu-icon">&#9776;</label>
-            <div class="buttons">
-              <button class="cart-button">Cart 🛒</button>
-              <button class="login-button">Login 🚪</button>
+            <div className="buttons">
+              <button className="cart-button">Cart 🛒</button>
+              <button className="login-button">Login 🚪</button>
             </div>
         </nav>
       </header>
