@@ -1,15 +1,24 @@
-
+import { useState, useEffect } from "react"
+import {get} from "../utils/conexionAPI.js"
 import {Carta} from "./Carta.jsx"
 
 
-const GrillaCartas = () => {
+export const GrillaCartas = () => {
 
+    const [peliculas,setPeliculas]= useState([])
+
+    useEffect(()=>{
+        get("/discover/movie").then((data)=>{
+            // console.log(data);
+            setPeliculas(data.results)
+        })
+    },[])
 
     return (
-        <>
-        <Carta/>
-        </>
+        <ul className="grillaCartas">
+            {peliculas.map((pelicula)=>{
+                <Carta pelicula={pelicula}/>
+            })}
+        </ul>
     )
 }
-
-export default GrillaCartas

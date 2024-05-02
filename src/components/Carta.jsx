@@ -1,7 +1,7 @@
 import "./Carta.css"
 //const Carta = ({link, nombre, fecha, rating}) => {
-export const Carta = ({link, nombre, fecha, rating}) => {   
-    const imgAlt = `Portada de la pelicula ${nombre}`
+export const Carta = () => {   
+   // const imgAlt = `Portada de la pelicula ${nombre}`
     return(
         <h2>Pelicula</h2>
             // <div class="card">

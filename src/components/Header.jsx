@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './Header.css'
-function Header() {
+
+export const Header = ()=>  {
   const [count, setCount] = useState(0)
 
   return (
@@ -8,12 +9,13 @@ function Header() {
       
     <header className="header">
         <nav>
-      <logo>
+      <div>
         <p className="logo">🎬Blockflix</p>
-      </logo>
+      </div>
           <input type="checkbox" id="menu-toggle"/>
-            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <label htmlFor="menu-toggle" className="menu-icon">&#9776;</label>
             <div className="buttons">
+              
               <button className="cart-button">Cart 🛒</button>
               <button className="login-button">Login 🚪</button>
             </div>
@@ -23,5 +25,3 @@ function Header() {
     </>
   )
 }
-
-export default Header

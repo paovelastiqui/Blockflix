@@ -1,18 +1,15 @@
 
-import GrillaCartas from "../components/GrillaCartas.jsx";
-import Header from "../components/Header.jsx";
+import {GrillaCartas} from "../components/GrillaCartas.jsx";
+import {Header} from "../components/Header.jsx";
 
 
-const LandingPage = () => {
+export const LandingPage = () => {
 
 
     return (
         <>
-       <h2>Landing Page</h2> 
        <Header/>
        <GrillaCartas/>
         </>
     )
 }
-
-export default LandingPage
