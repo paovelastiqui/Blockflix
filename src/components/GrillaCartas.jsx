@@ -17,7 +17,7 @@ export const GrillaCartas = () => {
     return (
         <ul className="grillaCartas">
             {peliculas.map((pelicula)=>{
-                <Carta pelicula={pelicula}/>
+                <Carta key={pelicula.id} peliculaMap={pelicula}/>
             })}
         </ul>
     )
