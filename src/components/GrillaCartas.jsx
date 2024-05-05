@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import {get} from "../utils/conexionAPI.js"
 import {Carta} from "./Carta.jsx"
-
+import "./GrillaCartas.css"
 
 export const GrillaCartas = () => {
 

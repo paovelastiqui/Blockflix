@@ -1,13 +1,12 @@
 
 const API = "https://api.themoviedb.org/3"
-
+const Api_Auth =import.meta.env.API_AUTH
 
 export const get = (path) =>{
     
     return fetch (API + path,{
             headers :{
-                Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0YWFkYTJhYTZjNmFiYTJjM2EyZWNiYWY4MGEzNGY4NCIsInN1YiI6IjY2MWQ0NzA1ZWMwYzU4MDE2Mzc0M2NlNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.5gfnssn7sKf-mgVObvemAt8Ak19cTeEunhX05qmklLA",
-                "Content-type":"aplication/json;charset-utf-8"
+                Authorization: Api_Auth
             }
         }).then((results)=>results.json())
         

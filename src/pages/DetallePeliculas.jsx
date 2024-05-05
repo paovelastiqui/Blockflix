@@ -1,13 +1,22 @@
-import {Header} from "../components/Header"
 
-export const DetallePelicula = () => {
+import {Link} from "react-router-dom"
 
+export const DetallePelicula = (peliculaID) => {
+   
+    const [peliculas,setPeliculas]= useState([])
 
-    return(
-        <>
-        <Header/>
-        <h2>Detalle Pelicula</h2>
-        </>
+    useEffect(()=>{
+        get("/pelicula/:peliculaID").then((data)=>{
+            // console.log(data);
+            setPeliculas(data.results)
+        })
+    },[])
 
+    return (
+        <ul className="grillaCartas">
+            {peliculas.map((pelicula)=>(
+                <Carta key={pelicula.id} peliculaMap={pelicula}/>
+            ))}
+        </ul>
     )
 }
