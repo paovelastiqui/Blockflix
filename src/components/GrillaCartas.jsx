@@ -8,10 +8,15 @@ export const GrillaCartas = () => {
     const [peliculas,setPeliculas]= useState([])
 
     useEffect(()=>{
-        get("/discover/movie").then((data)=>{
+        get("/discover/movie")
+        .then((data)=>{
             // console.log(data);
             setPeliculas(data.results)
         })
+        .catch((error) => {
+            console.error("Error recuperando películas:", error);
+            // Manejar el error de forma adecuada, por ejemplo mostrando un mensaje de error al usuario
+        });
     },[])
 
     return (
