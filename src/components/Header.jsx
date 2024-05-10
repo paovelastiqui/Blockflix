@@ -1,3 +1,4 @@
+import {Link} from "react-router-dom"
 import { useState } from 'react'
 import './Header.css'
 
@@ -11,13 +12,13 @@ export const Header = ()=>  {
       <header className="header">
         <nav>
           <div>
-            <p className="logo">🎬Blockflix</p>
+          <Link className="links" to = "/"><p className="logo">🎬Blockflix</p></Link>
           </div>
           <input type="checkbox" id="menu-toggle" />
           <label htmlFor="menu-toggle" className="menu-icon">&#9776;</label>
           <div className="buttons">
-            <button className="cart-button">Cart 🛒</button>
-            <button className="login-button">Login 🚪</button>
+          <Link className="links" to = "/cart"><button className="cart-button">Cart 🛒</button></Link>
+          <Link className="links" to = "/login"><button className="login-button">Login 🚪</button></Link>
         </div>
         </nav>
       </header>

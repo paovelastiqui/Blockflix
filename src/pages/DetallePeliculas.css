@@ -1,0 +1,22 @@
+.contenedorPelicula {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Añade esta línea para centrar horizontalmente */
+    height: 100vh; /* Ajusta la altura según tus necesidades */
+  
+  }
+  
+  .ImgPelicula {
+    /* Estilos para la imagen de la película */
+    /* Asegúrate de ajustar el tamaño, márgenes y otros estilos según tus necesidades */
+  }
+  
+  .detallePelicula {
+    background-color: rgb(96, 89, 89); /* Color del rectángulo rojo */
+    border-radius: 25px;
+    color: white; /* Color del texto en el rectángulo rojo */
+    padding: 10px; /* Espaciado interno para el texto */
+    margin-left: 10px; /* Espaciado entre la imagen y el texto */
+    max-width: 400px;
+  }
+  

@@ -2,7 +2,9 @@
 import React, { useState } from 'react';
 import './Login.css';
 
-const Login = ({ onLogin, onRegister }) => {
+import {Header} from "../components/Header.jsx"
+
+export const Login = ({ onLogin, onRegister }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -21,6 +23,8 @@ const Login = ({ onLogin, onRegister }) => {
   };
 
   return (
+    <>
+    <Header/>
     <div className="login-form-container">
       <h2>{isLogin ? 'Login' : 'Registro'}</h2>
       <input
@@ -28,13 +32,13 @@ const Login = ({ onLogin, onRegister }) => {
         placeholder="Usuario"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
-      />
+        />
       <input
         type="password"
         placeholder="Contraseña"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
-      />
+        />
       {!isLogin && (
         <>
           <input
@@ -42,19 +46,19 @@ const Login = ({ onLogin, onRegister }) => {
             placeholder="Confirmar Contraseña"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
-          />
+            />
           <input
             type="email"
             placeholder="Correo Electrónico"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-          />
+            />
           <input
             type="email"
             placeholder="Confirmar Correo Electrónico"
             value={confirmEmail}
             onChange={(e) => setConfirmEmail(e.target.value)}
-          />
+            />
         </>
       )}
       <button onClick={isLogin ? handleLogin : handleRegister}>
@@ -64,7 +68,7 @@ const Login = ({ onLogin, onRegister }) => {
         {isLogin ? '¿No tienes cuenta? Regístrate' : '¿Ya tienes cuenta? Inicia sesión'}
       </p>
     </div>
+</>
   );
 };
 
-export default Login;

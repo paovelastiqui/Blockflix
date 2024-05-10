@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react"
 import {get} from "../utils/conexionAPI.js"
 import { useParams } from "react-router-dom"
+import {Header} from "../components/Header.jsx"
+import "./DetallePeliculas.css"
 
 export const DetallePeliculas = () => {
    
@@ -23,11 +25,22 @@ export const DetallePeliculas = () => {
    const imgURL = `https://image.tmdb.org/t/p/w300${pelicula.poster_path}`;
 
    return(
-    <div className="detallePelicula">
-        <img src={imgURL} alt={pelicula.title} className="col"/>
-    
+    <>
+    <Header/>
+    <div className="contenedorPelicula">
+        <img src={imgURL} alt={pelicula.title} className="ImgPelicula"/>
+        <div className="detallePelicula">
+            <h3>Titulo: {pelicula.title}</h3> 
+            <p>
+                <strong>Generos: </strong>{pelicula.genres.map((genre)=>genre.name).join("  -  ")} 
+            </p>
+            <p>
+                <strong>Descripción: </strong>{pelicula.overview}
+            </p>
+        </div>
     
     </div>
+    </>
 
    )
 
