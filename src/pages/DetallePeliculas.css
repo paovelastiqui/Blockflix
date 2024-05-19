@@ -1,22 +1,141 @@
 .contenedorPelicula {
-    display: flex;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 100%;
+  padding: 50px 80px;
+  justify-content: center; /* Añade esta línea para centrar horizontalmente */
+  height: auto; /* Ajusta la altura según tus necesidades */
+}
+
+.detalleImagen {
+  margin: 50px;
+}
+  
+.ImgPelicula {
+  border-radius: 35px;
+}
+
+.detallePelicula {
+  padding: 50px 0;
+}
+  
+.detalleInfo {
+  background-color: rgb(57, 57, 57); /* Color del rectángulo rojo */
+  border-radius: 25px;
+  color: white; /* Color del texto en el rectángulo rojo */
+  padding: 25px; /* Espaciado interno para el texto */
+  /* max-width: 400px; */
+  margin-bottom: 15px;
+}
+ 
+.detalleInfo h3 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: red;
+}
+
+.detalleInfo p {
+  font-size: 17px;
+}
+
+.detalleAlquiler {
+  display: flex;
+  align-items: center;
+  padding-left: 13px;
+}
+
+.signo {
+  cursor: pointer;
+  background-color: rgb(207, 191, 191);
+  font-size: 20px;
+  width: 35px;
+  height: 35px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.detalleBotones {
+  display: flex;
+}
+
+.like {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(207, 191, 191);
+  color: black;
+  width: 220px;
+  height: 35px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.carrito {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 0, 0);
+  color: white;
+  font-weight: bold;
+  width: 220px;
+  height: 35px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.like img {
+  margin-right: 10px;
+  width: 25px;
+}
+
+/* RESPONSIVES */
+
+@media screen and (max-width: 1040px) {
+  .detalleImagen {
+    margin: 50px 35px 0 0;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .contenedorPelicula {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    padding: 50px;
     justify-content: center; /* Añade esta línea para centrar horizontalmente */
-    height: 100vh; /* Ajusta la altura según tus necesidades */
-  
+    height: auto; /* Ajusta la altura según tus necesidades */
   }
-  
-  .ImgPelicula {
-    /* Estilos para la imagen de la película */
-    /* Asegúrate de ajustar el tamaño, márgenes y otros estilos según tus necesidades */
+
+  .detalleImagen {
+    margin: 50px 30px;
   }
-  
+
   .detallePelicula {
-    background-color: rgb(96, 89, 89); /* Color del rectángulo rojo */
-    border-radius: 25px;
-    color: white; /* Color del texto en el rectángulo rojo */
-    padding: 10px; /* Espaciado interno para el texto */
-    margin-left: 10px; /* Espaciado entre la imagen y el texto */
-    max-width: 400px;
+    padding: 30px 0;
+    width: auto;
   }
-  
+
+  .detalleInfo {
+    padding: 25px;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .detalleImagen {
+    margin: 0;
+  }
+
+  .detalleInfo {
+    padding: 25px; 
+    margin-bottom: 15px;
+  }
+
+  .detalleBotones {
+    flex-direction: column;
+    align-items: center;
+  }
+}
